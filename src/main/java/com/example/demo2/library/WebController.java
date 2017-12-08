@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.List;
 
-@Controller
+//@Controller
 public class WebController {
 
     private final BookDao dao;
@@ -19,7 +19,7 @@ public class WebController {
         this.dao = dao;
     }
 
-    @RequestMapping(path="/books/{title}", method = RequestMethod.GET, produces = "text/html")
+    @RequestMapping(path="/booksweb/{title}", method = RequestMethod.GET, produces = "text/html")
     public String showBook(@PathVariable  String title, Model model) {
         Book book = dao.getBookByTitle(title);
         // TODO: on null return 404 status
@@ -29,7 +29,7 @@ public class WebController {
 
     }
 
-    @RequestMapping(path="/books", method = RequestMethod.GET)
+    @RequestMapping(path="/booksweb", method = RequestMethod.GET)
     public String showBooks(Model model) {
        List<Book> books= dao.findAll();
        fj.data.List<Book> booksToRender =  fj.data.List.arrayList(books.toArray(new Book[]{}));

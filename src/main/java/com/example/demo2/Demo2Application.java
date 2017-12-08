@@ -12,14 +12,14 @@ import java.util.concurrent.Executors;
 
 @SpringBootApplication
 public class Demo2Application {
-    @Bean
+   /* @Bean
     public ViewResolver hbViewResolver() {
         HandlebarsViewResolver vr = new HandlebarsViewResolver();
         vr.setPrefix("templates/");
         //vr.getHandlebars().set
         return vr;
     }
-
+*/
     // @Bean
     public ViewResolver viewResolver() {
         return new BeanNameViewResolver();

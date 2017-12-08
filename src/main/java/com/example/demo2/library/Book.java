@@ -9,11 +9,13 @@ public class Book {
     private String title;
     private String author;
     private int price;
+    private long timestamp;
 
     public Book(String title, String author, int price) {
         this.title = title;
         this.author = author;
         this.price = price;
+        this.timestamp = System.currentTimeMillis();
     }
 
     public Book() {
@@ -52,6 +54,14 @@ public class Book {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    public long getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(long timestamp) {
+        this.timestamp = timestamp;
     }
 
     @Override

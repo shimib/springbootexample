@@ -9,4 +9,5 @@ import java.util.List;
 public interface BookDao extends JpaRepository<Book, Long>{
     List<Book> getBooksByPriceLessThan(int price);
     Book getBookByTitle(String title);
+    int deleteBookByTitle(String title);
 }
