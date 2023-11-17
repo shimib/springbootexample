@@ -28,7 +28,7 @@ jobs:
         with:
           java-version: "11"
           distribution: "temurin"
-
+      - run: mvn install
       - uses: jfrog/frogbot@v2
         env:
           JF_URL: ${{ secrets.JF_URL }}
