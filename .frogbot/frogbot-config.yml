@@ -1,9 +1,0 @@
-- params:
-         git:
-           repoName: springbootexample
-           branches:
-             - master
-         scan:
-           packageManager: mvn
-           installDepsCmd: mvn install
-           includeAllVulnerabilities: true
